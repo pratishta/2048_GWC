@@ -1,6 +1,6 @@
 var grid = setUpBoard(4);
 
-function setUpBoard(size){
+function setUpBoard(snize){
 	var setGrid = [];
 	for (var row = 0; row < size; row++){
 		setGrid.push([]);
@@ -26,18 +26,49 @@ function printBoard(grid){
 	}
 
 	document.getElementById("container").innerHTML = board;
-	
 }
 
-//*******COMMANDS********COMMANDS********COMMANDS*********COMMANDS*******COMMANDS*****//
-//																					  //
-//*******COMMANDS********COMMANDS********COMMANDS*********COMMANDS*******COMMANDS*****//
+document.onkeypress = function(){onSnick};
+
+function onSnick(e){
+	e = e || window.event;
+
+	if (e.keyCode === 37) {
+		shiftLeft();
+	}
+
+	else if (e.keyCode === 39) {
+		shiftRight();
+	}
+
+	else if (e.keyCode === 38) {
+		shiftUp();
+	}
+
+	else if (e.keyCode === 40) {
+		shiftDown();
+	}
+}
+
+function checkExtras(direction) {
+	if (direction === 'left') {
+		for (var row = 0; row < size; row++){
+			for (var col = 0; col < size; col++){
+				if ()
+			}
+	}
+}
+}
+
+function shiftLeft() {
+	checkExtras('left');
+}
 
 $(document).ready(
 	function(){
 		var myGrid = setUpBoard(4);
 		printBoard(myGrid);
-}
-);
+	}
+	);
 
 
