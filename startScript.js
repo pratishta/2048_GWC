@@ -13,7 +13,7 @@ function setUpBoard(size){
 }
 
 function printBoard(grid){
-	var board = '<br/>' + "*--------------------*" + '<br/>';
+	var board = '<br/>' + "*----------------*" + '<br/>';
 	
 	for(var row=0; row<grid.length; row++){ //(2)
 		board += "|     ";
@@ -21,7 +21,7 @@ function printBoard(grid){
 			board += grid[row][col] + "     |     ";
 		}
 		board += '<br/>';
-		board += "*--------------------*";
+		board += "*----------------*";
 		board += '<br/>';
 	}
 
