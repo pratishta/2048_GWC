@@ -32,7 +32,7 @@ function setUpBoard(size){
 }
 
 function printBoard(){
-	var board = '<br/>' + "*--------------------------*" + '<br/>';
+	var board = '<br/>' + "*----------------------------------*" + '<br/>';
 	
 	for(var row=0; row<grid.length; row++){ 
 		board += "|";
@@ -40,7 +40,7 @@ function printBoard(){
 			board += (grid[row][col]).val + "&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;";
 		}
 		board += '<br/>';
-		board += "*--------------------------*";
+		board += "*----------------------------------*";
 		board += '<br/>';
 	}
 
@@ -85,22 +85,22 @@ function shiftLeft() {
 	for (var row = 0; row < grid.length; row++){
 		for (var col = 0; col < grid.length; col++){
 			//grid[row][col].val = "friends";
-			/*if ((col !== 0) && (grid[row][col].val !== "&nbsp;&nbsp;&nbsp;")){
+			if ((col !== 0) && (grid[row][col].val !== "&nbsp;&nbsp;&nbsp;")){
 				if (grid[row][col].val === grid[row][col-1].val){
 					grid[row][col].merge(grid[row][col-1]);
 				}
 				else {
 					grid[row][col].move(grid[row][col-1])
 				}
-			}*/
-			if ((col !== 0) && (grid[row][col].val !== "&nbsp;&nbsp;&nbsp;") && (grid[row][col].hasMoved === false)){
+			}
+			/*if ((col !== 0) && (grid[row][col].val !== "&nbsp;&nbsp;&nbsp;") && (grid[row][col].hasMoved === false)){
 				if (grid[row][col].val === grid[row][col+1].val){
 					grid[row][col].merge(grid[row][col+1]);
 				}
 				else {
 					grid[row][col].move(grid[row][col+1]);
 				}
-			}
+			}*/
 		}
 	}
 }
